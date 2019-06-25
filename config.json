@@ -1,0 +1,14 @@
+{
+  "api": {
+    "host": "http://localhost:8000/api/v1/",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTUwMjMxMjUyLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIn0.hstofkQpsYsGxeDn8kP3_Vgovq4XjHuCjEda-i2SaQg"
+  },
+  "broker": {
+    "host": "mqtts://localhost:8443",
+    "username": "username",
+    "password": "K_5uvZB8HW43VyJxTlaiG0BvoCYYOJ0SUYGAOOlGrUs"
+  },
+  "sensor": {
+    "working_period": "1"
+  }
+}
