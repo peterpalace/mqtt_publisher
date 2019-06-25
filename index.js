@@ -10,7 +10,7 @@ const client = mqtt.connect(`${config.broker.host}`, {
   password: psw,
   rejectUnauthorized: false
 });
-/*const SDS011Client = require("sds011-client");
+const SDS011Client = require("sds011-client");
 
 const sensor = new SDS011Client("/dev/ttyUSB0");
 Promise
@@ -18,14 +18,14 @@ Promise
   sensor.setWorkingPeriod(config.sensor.working_period)])
     .then(() => {
       // everything's set
-    });*/
+    });
 
 client.on('connect', () => {
   // TODO cache getPubKeys response
-  setInterval(() => {
-    message = "100";
-  // sensor.on('reading', (data) => {
-  //  message = data.pm10;
+  //setInterval(() => {
+  //  message = "100";
+  sensor.on('reading', (data) => {
+    message = data.pm10;
     let pubkeys = utils.getPubKeys(topic);
     pubkeys.then((keys) => {
       if (keys.length > 0) {
@@ -36,6 +36,6 @@ client.on('connect', () => {
         });
       }
     })
-  //});
-  }, 2000)
+  });
+  // }, 2000)
 });

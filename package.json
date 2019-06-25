@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "mosca": "^2.8.3",
-    "openpgp": "^4.4.4"
+    "openpgp": "^4.4.4",
+    "sds011-client": "^1.0.1"
   }
 }
